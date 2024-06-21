@@ -21,7 +21,7 @@ dotenv.config();
 
 // Connecting to database
 database.connect();
- 
+app.use(bodyParser.json()); // To parse JSON bodies
 // Middlewares
 app.use(express.json());
 app.use(cookieParser());
