@@ -342,7 +342,7 @@ exports.getCourseDetails = async (req, res) => {
     })
   }
 }
-  exports.getFullCourseDetails = async (req, res) => {
+exports.getFullCourseDetails = async (req, res) => {
     try {
       const { courseId } = req.body
       const userId = req.user.id
@@ -412,7 +412,7 @@ exports.getCourseDetails = async (req, res) => {
         message: error.message,
       })
     }
-  }
+}
 
 // Get a list of Course for a given Instructor
 exports.getInstructorCourses = async (req, res) => {

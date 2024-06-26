@@ -23,7 +23,7 @@ export default function EditProfile() {
     // console.log("Form Data - ", data)
     try {
       dispatch(updateProfile(token, data))
-    } catch (error) {
+    } catch (error) { 
       console.log("ERROR MESSAGE - ", error.message)
     }
   }
@@ -33,12 +33,12 @@ export default function EditProfile() {
         {/* Profile Information */}
         <div className="my-10 flex flex-col gap-y-6 rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-8 px-12">
           <h2 className="text-lg font-semibold text-richblack-5">
-            Profile Information
+            Update Job Details
           </h2>
           <div className="flex flex-col gap-5 lg:flex-row">
             <div className="flex flex-col gap-2 lg:w-[48%]">
               <label htmlFor="firstName" className="lable-style">
-                First Name
+              companyName
               </label>
               <input
                 type="text"
@@ -47,7 +47,7 @@ export default function EditProfile() {
                 placeholder="Enter first name"
                 className="form-style"
                 {...register("firstName", { required: true })}
-                defaultValue={user?.firstName}
+                defaultValue={job?.companyName}
               />
               {errors.firstName && (
                 <span className="-mt-1 text-[12px] text-yellow-100">
